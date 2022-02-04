@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Form = ({onInputValue,onBtnSubmit,onTelValue}) => {
     return ( 
      <>
@@ -26,4 +28,10 @@ const Form = ({onInputValue,onBtnSubmit,onTelValue}) => {
      
 }
  
+Form.prototypes ={
+  onInputValue: PropTypes.func.isRequired,
+  onBtnSubmit: PropTypes.func.isRequired,
+  onTelValue: PropTypes.func.isRequired,
+}
+
 export default Form;

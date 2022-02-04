@@ -51,7 +51,7 @@ class App extends Component {
     if (!bb) {
     return this.addContact(newContact)
   } else {
-    alert(bb)
+    alert(`${this.state.name} is alredy in contacts`)
   }
   }
   render() { 
