@@ -40,13 +40,19 @@ class App extends Component {
   };
   onBtnSubmit=(e)=>{
     e.preventDefault()
+    
     const newContact = {
       ...this.state,
       name: this.state.name,
       id: nanoid(),
       number: this.state.number
     }
-    this.addContact(newContact)
+    const bb = this.state.contacts.some(el => el.name.toLowerCase() === this.state.name.toLowerCase());
+    if (!bb) {
+    return this.addContact(newContact)
+  } else {
+    alert(bb)
+  }
   }
   render() { 
   
