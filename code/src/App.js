@@ -47,9 +47,9 @@ class App extends Component {
       id: nanoid(),
       number: this.state.number
     }
-    const bb = this.state.contacts.some(el => el.name.toLowerCase() === this.state.name.toLowerCase());
-    if (!bb) {
-    return this.addContact(newContact)
+    const isDuplicate = this.state.contacts.some(el => el.name.toLowerCase() === this.state.name.toLowerCase());
+    if (!isDuplicate) {
+     this.addContact(newContact)
   } else {
     alert(`${this.state.name} is alredy in contacts`)
   }
